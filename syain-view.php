@@ -63,10 +63,12 @@ function check(){
     if ( <?= $gno ?> == 2 ) {
         // 管理者コード
         var kcode = $("#kanri").val();
-        // 前ゼロ４桁に変換
-        kcode = ( "0000" + kcode ).slice(-4);
-        // セットし直し
-        $("#kanri").val( kcode );
+        if ( kcode != "" ) {
+            // 前ゼロ４桁に変換
+            kcode = ( "0000" + kcode ).slice(-4);
+            // セットし直し
+            $("#kanri").val( kcode );
+        }
     }
 
     return true;
