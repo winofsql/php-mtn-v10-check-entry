@@ -21,7 +21,7 @@ while ( $row = $result->fetch_array( MYSQLI_BOTH ) ) {
     }
     else {
         $syozoku_option .= 
-            "<option value='{$row[0]}'>{$row["名称"]}</option>";
+            "<option value='{$row[1]}'>{$row["名称"]}</option>";
     }
 }
 
